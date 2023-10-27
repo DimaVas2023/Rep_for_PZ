@@ -17,5 +17,7 @@ def RectPS(x1,y1,x2,y2):
     print('Периметр прямоугольника равен: ', abs(x*2+y*2))
 
 
-
-RectPS(x1, y1, x2, y2)
+try:
+    RectPS(x1, y1, x2, y2)
+except:
+    print('введены не корректные данные')
