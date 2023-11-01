@@ -3,6 +3,7 @@
 
 r = int(input('Введите размер списка: '))
 sp = []
+index = 0
 
 def create_list(i):
     try:
@@ -15,6 +16,10 @@ def create_list(i):
 for i in range(r):
     create_list(i)
 
+max_num = max(sp)
 
+for i, j in enumerate(sp):
+    if j == max_num:
+        index = i
 
-
+print(f'Номер пооследнего локального макимума списка - {index}')
