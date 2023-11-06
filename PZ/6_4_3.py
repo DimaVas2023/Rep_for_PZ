@@ -30,6 +30,13 @@ for i, j in enumerate(sp):
     if j == min_num:
         index_min_num = i
 
-sp_reversed = sp[:index_min_num:]+sp[index_min_num:index_max_num:-1]+sp[index_max_num::]
-print(sp_reversed)
+if index_max_num <= len(sp)-1:
+    part_of_sp = sp[index_min_num:index_max_num+1:]
+    sp_reversed = sp[:index_min_num:]+part_of_sp[::-1]+sp[index_max_num+1::]
 
+else:
+    part_of_sp = sp[index_min_num::]
+    sp_reversed = sp[:index_min_num:]+part_of_sp[::-1]
+
+
+print(sp_reversed)
