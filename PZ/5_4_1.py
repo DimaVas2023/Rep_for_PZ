@@ -5,4 +5,5 @@ def summa():
     for i in range(1,61):
         s+=i
     return s
+
 print(f'Сумма чисел от 1 до 60: {summa()}')
